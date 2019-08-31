@@ -1,0 +1,12 @@
+@import 'globals/variables';
+
+.header{
+  position: fixed;
+  width: 100vw;
+  padding: $grid-base-6x;
+  background-color: $greyscale-dark-1;
+
+  p{
+    margin:0;
+  }
+}

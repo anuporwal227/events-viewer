@@ -1,0 +1,117 @@
+@import 'globals/variables';
+@import 'globals/mixins';
+
+.home{
+	@include expanded;
+	font-family: 'Roboto Slab', sans-serif;
+
+	.content{
+		display:flex;
+		padding-top: 64px;
+		max-height: calc(100vh - 64px);
+
+		.events-list{
+			min-width:200px;
+			overflow-y: auto;
+
+			.event-type{
+				border: 1px solid $greyscale-standard;
+				padding: $grid-base-3x;
+				cursor:pointer;
+
+				&:hover{
+					background-color: $greyscale-light-4;
+				}
+			}
+		}
+
+		.selected-events{
+			position: absolute;
+			z-index: $z--maximum;
+			left: 212px;
+			top: $grid-base-6x;
+			display: flex;
+			overflow: hidden;
+			max-width: calc(100vw - 224px);
+
+			.selected-event{
+				background-color: white;
+				padding: $grid-base-3x;
+				border-right: 1px solid $greyscale-dark-1;
+				border-bottom: 1px solid $greyscale-dark-1;
+				width:auto;
+				display:flex;
+				overflow: hidden;
+				box-sizing: border-box;
+				&.active {
+					border-bottom: none;
+				}
+
+				.tab-content{
+					min-width: 30px;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					margin:0 12px 0 0;
+					overflow: hidden;
+				}
+
+				.close-tab{
+					margin-left: auto;
+					color: $greyscale-dark-1;
+					cursor: pointer;
+					opacity: 0;
+				}
+
+				&:hover {
+					.close-tab{
+						opacity: 1;
+						transition: opacity 150ms ease-in;
+					}
+				}
+			}
+		}
+
+		.event-details{
+			padding: $grid-base-3x;
+			overflow-y: auto;
+			position: relative;
+		}
+	}
+}
+
+.active-tab-content {
+	border:1px solid $greyscale-light-1;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	padding: $grid-base-4x;
+	box-sizing: border-box;
+	border-radius: $border-radius-standard $border-radius-standard 0 0;
+	overflow: hidden;
+
+	tr:nth-child(2n+1){
+		background-color: $greyscale-light-4;
+	}
+
+	td {
+		padding: $grid-base-2x;
+		font-family: 'Lato', sans-serif;
+		font-weight: $weight-normal;
+	}
+}
+
+.th {
+	position: sticky;
+	top: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: $font-standard;
+	font-weight: $weight-heavy;
+	padding: $grid-base-4x;
+	color: $neutral-dark-4;
+	letter-spacing: 0.5px;
+	text-align: left;
+	background-color: $greyscale-light-2;
+	min-width: 100px;
+}

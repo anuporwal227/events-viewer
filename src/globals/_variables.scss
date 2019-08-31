@@ -1,0 +1,128 @@
+// Layout Properties
+$grid-base: 4px;
+$grid-base-1x: $grid-base;
+$grid-base-2x: $grid-base * 2;
+$grid-base-3x: $grid-base * 3;
+$grid-base-4x: $grid-base * 4;
+$grid-base-5x: $grid-base * 5;
+$grid-base-6x: $grid-base * 6;
+$grid-standard: $grid-base-3x;
+$grid-block-spacing: $grid-standard * 2;
+
+// Font Sizes
+$font-small-3:  8px;
+$font-small-2:  10px;
+$font-small-1:  12px;
+$font-standard: 14px;
+$font-normal-1: 16px;
+$font-normal-2: 18px;
+$font-big:			20px;
+$font-big-1:		24px;
+$font-big-2:		30px;
+$font-title:		36px;
+$font-title-1:	48px;
+$font-title-2:	60px;
+$font-maxima:		72px;
+
+// Font Weights
+$weight-hairline: 100;
+$weight-light:    300;
+$weight-normal:   400;
+$weight-medium:   500;
+$weight-heavy:    600;
+$weight-bold:     700;
+$weight-black:    900;
+
+// Border Properties
+$border-radius-standard: $grid-base;
+
+// Timings
+$animation-standard: 0.25s;
+
+// Easings
+$easing-smooth-ease-out: cubic-bezier(0.4, 1.03, 0.29, 0.99);
+
+// Animations
+$smooth-ease-out: ($animation-standard * 3) $easing-smooth-ease-out;
+$quick-ease-out: $animation-standard $easing-smooth-ease-out;
+
+// Colors
+$primary-dark-4:				hsl(205, 100%, 21%);
+$primary-dark-3:				hsl(205, 87%, 29%);
+$primary-dark-2:				hsl(205, 82%, 33%);
+$primary-dark-1:				hsl(205, 76%, 39%);
+$primary-standard:			hsl(205, 67%, 45%);
+$primary-light-1:				hsl(205, 65%, 55%);
+$primary-light-2:				hsl(205, 74%, 65%);
+$primary-light-3:				hsl(205, 84%, 74%);
+$primary-light-4:				hsl(205, 97%, 85%);
+$primary-light-5:				hsl(205, 79%, 92%);
+
+$accent-dark-4:					hsl(15, 86%, 30%);
+$accent-dark-3:					hsl(22, 82%, 39%);
+$accent-dark-2:					hsl(29, 80%, 44%);
+$accent-dark-1:					hsl(36, 77%, 49%);
+$accent-standard:				hsl(42, 87%, 55%);
+$accent-light-1:				hsl(44, 92%,63%);
+$accent-light-2:				hsl(48, 94%, 68%);
+$accent-light-3:				hsl(48, 95%, 76%);
+$accent-light-4:				hsl(48, 100%, 88%);
+$accent-light-5:				hsl(49, 100%, 96%);
+
+$neutral-dark-4:				hsl(209, 61%, 16%);
+$neutral-dark-3:				hsl(211, 39%, 23%);
+$neutral-dark-2:				hsl(209, 34%, 30%);
+$neutral-dark-1:				hsl(209, 28%, 39%);
+$neutral-standard:			hsl(210, 22%, 49%);
+$neutral-light-1:				hsl(209, 23%, 60%);
+$neutral-light-2:				hsl(211, 27%, 70%);
+$neutral-light-3:				hsl(210, 31%, 80%);
+$neutral-light-4:				hsl(212, 33%, 89%);
+$neutral-light-5:				hsl(210, 36%, 96%);
+
+$support-cool-dark-4:				hsl(184, 91%, 17%);
+$support-cool-dark-3:				hsl(185, 84%, 25%);
+$support-cool-dark-2:				hsl(185, 81%, 29%);
+$support-cool-dark-1:				hsl(184, 77%, 34%);
+$support-cool-standard:			hsl(185, 62%, 45%);
+$support-cool-light-1:			hsl(185, 57%, 50%);
+$support-cool-light-2:			hsl(184, 65%, 59%);
+$support-cool-light-3:			hsl(184, 80%, 74%);
+$support-cool-light-4:			hsl(185, 94%, 87%);
+$support-cool-light-5:			hsl(186, 100%, 94%);
+
+$support-warm-dark-4:				hsl(360, 92%, 20%);
+$support-warm-dark-3:				hsl(360, 85%, 25%);
+$support-warm-dark-2:				hsl(360, 79%, 32%);
+$support-warm-dark-1:				hsl(360, 72%, 38%);
+$support-warm-standard:			hsl(360, 67%, 44%);
+$support-warm-light-1:			hsl(360, 64%, 55%);
+$support-warm-light-2:			hsl(360, 71%, 66%);
+$support-warm-light-3:			hsl(360, 77%, 78%);
+$support-warm-light-4:			hsl(360, 82%, 89%);
+$support-warm-light-5:			hsl(360, 100%, 97%);
+
+$greyscale-dark-4:				#303030;
+$greyscale-dark-3:				#686868;
+$greyscale-dark-2:				#8D8D8D;
+$greyscale-dark-1:				#A4A4A4;
+$greyscale-standard:			#B6B6B6;
+$greyscale-light-1:				#CBCBCB;
+$greyscale-light-2:				#E0E0E0;
+$greyscale-light-3:				#F0F0F0;
+$greyscale-light-4:				#F3F3F3;
+$greyscale-light-5:				#FAFAFA;
+
+// Z-Indices
+$z--base:						0;
+$z--sidebar:				1;
+$z--search-overlay:	49;
+$z--search:					50;
+$z--modal:					100;
+$z--toast:					20000;
+$z--toast--active:	20001;
+$z--maximum: 				2147483647;
+
+// Box Shadows
+@mixin shadow-1 { box-shadow: 0 $grid-base $grid-base rgba(0, 0, 0, 0.25); }
+@mixin shadow-2 { box-shadow: 0 $grid-base $grid-base-3x rgba(0, 0, 0, 0.25), 0 2px $grid-base rgba(0, 0, 0, 0.25); }
